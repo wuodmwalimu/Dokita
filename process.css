@@ -1,0 +1,238 @@
+/* General body and layout styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1, h2 {
+    font-family: 'Arial', sans-serif;
+    color: #b12b2b; /* Red color for headings */
+}
+
+/* Header Styles */
+header {
+    background-color: #b12b2b;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Container for the content */
+.main-container {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #b12b2b;
+    color: white;
+}
+
+/* Buttons */
+button {
+    background-color: #b12b2b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #9e1e1e;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 40%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #b12b2b;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #9e1e1e;
+}
+
+/* Styling the donation form */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.modal-content input, .modal-content select {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal-content select {
+    background-color: #f5f5f5;
+}
+
+/* Donation button style */
+#addDonationBtn {
+    display: inline-block;
+    background-color: #b12b2b;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#addDonationBtn:hover {
+    background-color: #9e1e1e;
+}
+
+/* Active donation buttons */
+.donations-button {
+    background-color: #b12b2b;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.donations-button:hover {
+    background-color: #9e1e1e;
+}
+
+/* Add custom styles for lists */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li button {
+    background-color: #f5a623;
+    color: white;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+}
+
+li button:hover {
+    background-color: #d77f20;
+}
+
+/* Make sure donation tables are more readable */
+.donation-list-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.donation-list-table th,
+.donation-list-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.donation-list-table th {
+    background-color: #b12b2b;
+    color: white;
+}
+
+/* Add styling for the 'Cleared' donations */
+#clearedDonationsList {
+    margin-top: 30px;
+}
+
+/* Improve modal buttons and inputs */
+#confirmBloodTypeBtn {
+    background-color: #28a745;
+    color: white;
+}
+
+#confirmBloodTypeBtn:hover {
+    background-color: #218838;
+}
+
+/* General modal button and dropdown */
+#bloodTypeSelect {
+    padding: 8px;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+#confirmBloodTypeBtn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #b12b2b;
+    border: none;
+    color: white;
+}
+
+#confirmBloodTypeBtn:hover {
+    background-color: #9e1e1e;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="huh.css">
+  <title>Blood Donation Request Management</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2><i class="fa fa-heartbeat"></i> Blood Donation Request Management</h2>
+      <p class="highlight"><i class="fa fa-exclamation-circle"></i> Manage requests by approving or rejecting them.</p>
+    </header>
+
+    <!-- Form Section -->
+    <form id="bloodRequestForm" aria-labelledby="formTitle">
+      <!-- Requester's Information -->
+      <fieldset>
+        <legend id="formTitle"><i class="fa fa-user"></i> Requester Information</legend>
+        <div class="form-group">
+          <label for="name"><i class="fa fa-user"></i> Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="contact"><i class="fa fa-phone"></i> Contact Number</label>
+          <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required>
+        </div>
+        <div class="form-group">
+          <label for="email"><i class="fa fa-envelope"></i> Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        </div>
+        <div class="form-group">
+          <label for="relationship"><i class="fa fa-users"></i> Relationship to Recipient</label>
+          <select id="relationship" name="relationship" required>
+            <option value="">Select relationship</option>
+            <option value="Self">Self</option>
+            <option value="Family Member">Family Member</option>
+            <option value="Friend">Friend</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- Recipient's Information -->
+      <fieldset>
+        <legend><i class="fa fa-user-md"></i> Recipient Information</legend>
+        <div class="form-group">
+          <label for="recipientName"><i class="fa fa-user"></i> Recipient's Full Name</label>
+          <input type="text" id="recipientName" name="recipientName" placeholder="Enter recipient's full name" required>
+        </div>
+        <div class="form-group">
+          <label for="age"><i class="fa fa-calendar"></i> Recipient's Age</label>
+          <input type="number" id="age" name="age" min="1" max="120" placeholder="Enter recipient's age" required>
+        </div>
+        <div class="form-group">
+          <label for="bloodType"><i class="fa fa-tint"></i> Recipient's Blood Type</label>
+          <select id="bloodType" name="bloodType" required>
+            <option value="">Select blood type</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="units"><i class="fa fa-plus-circle"></i> Units of Blood Needed</label>
+          <input type="number" id="units" name="units" min="1" placeholder="Enter number of units needed" required>
+        </div>
+        <div class="form-group">
+          <label for="gender"><i class="fa fa-venus-mars"></i> Recipient's Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- Medical and Hospital Information -->
+      <fieldset>
+        <legend><i class="fa fa-hospital-o"></i> Medical Information</legend>
+        <div class="form-group">
+          <label for="hospital"><i class="fa fa-hospital-o"></i> Hospital Name</label>
+          <input type="text" id="hospital" name="hospital" placeholder="Enter hospital name" required>
+        </div>
+        <div class="form-group">
+          <label for="doctor"><i class="fa fa-user-md"></i> Attending Doctor's Name</label>
+          <input type="text" id="doctor" name="doctor" placeholder="Enter doctor's name" required>
+        </div>
+        <div class="form-group">
+          <label for="contactHospital"><i class="fa fa-phone-square"></i> Hospital Contact Number</label>
+          <input type="tel" id="contactHospital" name="contactHospital" placeholder="Enter hospital contact number" required>
+        </div>
+        <div class="form-group">
+          <label for="location"><i class="fa fa-map-marker"></i> Location</label>
+          <input type="text" id="location" name="location" placeholder="Enter city or hospital location" required>
+        </div>
+        <div class="form-group">
+          <label for="urgency"><i class="fa fa-exclamation-triangle"></i> Urgency Level</label>
+          <select id="urgency" name="urgency" required>
+            <option value="">Select urgency level</option>
+            <option value="Low">Low</option>
+            <option value="Moderate">Moderate</option>
+            <option value="High">High</option>
+            <option value="Critical">Critical</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="reason"><i class="fa fa-info-circle"></i> Reason for Request</label>
+          <textarea id="reason" name="reason" placeholder="Provide reason for the blood request" required></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Submit Button -->
+      <button type="submit"><i class="fa fa-paper-plane"></i> Submit Request</button>
+    </form>
+
+    <!-- Recent Requests Section -->
+    <section class="list-container">
+      <h3><i class="fa fa-list"></i> Recent Requests</h3>
+      <ul id="requestList">
+        <!-- Example Request -->
+        <li>
+          <p><strong>Recipient:</strong> Jane Doe, <strong>Blood Type:</strong> O+, <strong>Units:</strong> 2</p>
+          <button class="view-btn"><i class="fa fa-eye"></i> View</button>
+          <button class="approve-btn"><i class="fa fa-check"></i> Approve</button>
+          <button class="reject-btn"><i class="fa fa-times"></i> Reject</button>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Approved Requests Section -->
+    <section class="list-container">
+      <h3><i class="fa fa-thumbs-up"></i> Approved Requests</h3>
+      <ul id="approvedList"></ul>
+    </section>
+
+    <!-- Rejected Requests Section -->
+    <section class="list-container">
+      <h3><i class="fa fa-thumbs-down"></i> Rejected Requests</h3>
+      <ul id="rejectedList"></ul>
+    </section>
+  </div>
+
+  <script src="req.js"></script>
+</body>
+</html>

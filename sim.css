@@ -1,0 +1,171 @@
+/* General Reset */
+body, h1, h2, h3, p, table, th, td {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Body and Container Styling */
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  border-bottom: 2px solid #0077cc;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* Section Titles */
+section h2 {
+  font-size: 1.8rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+thead th {
+  background-color: #0077cc;
+  color: #fff;
+  text-align: left;
+  padding: 12px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+
+td, th {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+td:last-child, th:last-child {
+  text-align: center;
+}
+
+button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin: 5px 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #005da3;
+}
+
+button.toggle-btn {
+  background-color: #444;
+  margin: 15px 0;
+  display: block;
+}
+
+button.toggle-btn:hover {
+  background-color: #333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  table, th, td {
+    display: block;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 10px;
+    border: none;
+  }
+
+  tbody tr {
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  button.toggle-btn {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+}
+
+/* Modal (if any future modal is added) */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  z-index: 1000;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal button {
+  margin-top: 15px;
+}

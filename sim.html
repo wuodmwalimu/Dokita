@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Donation Request Management</title>
+  <link rel="stylesheet" href="sim.css"> <!-- Link your styles -->
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Blood Donation Request Management</h1>
+    </header>
+
+    <!-- Recent Requests Section -->
+    <section class="list-container" id="recent-requests">
+      <h2>Recent Requests</h2>
+      <table id="recentRequestsList">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Recipient</th>
+            <th>Blood Type</th>
+            <th>Units Needed</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Requests will be dynamically inserted here -->
+        </tbody>
+      </table>
+      <button class="toggle-btn" onclick="toggleVisibility('recent-requests')">Toggle Recent Requests</button>
+    </section>
+
+    <!-- Approved Requests Section -->
+    <section class="list-container" id="approved-requests">
+      <h2>Approved Requests</h2>
+      <table id="approvedRequestsList">
+        <thead>
+          <tr>
+              <th>#</th>
+            <th>Recipient</th>
+            <th>Blood Type</th>
+            <th>Units Needed</th>
+            <th>Price Type</th>
+            <th>Anticipated Date of Transfusion </th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Approved requests will be dynamically inserted here -->
+        </tbody>
+      </table>
+      <button class="toggle-btn" onclick="toggleVisibility('approved-requests')">Toggle Approved Requests</button>
+    </section>
+
+    <!-- On Hold Requests Section -->
+    <section class="list-container" id="onhold-requests">
+      <h2>On Hold Requests</h2>
+      <table id="onholdRequestsList">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Recipient</th>
+            <th>Blood Type</th>
+            <th>Units Needed</th>
+            <th>Price Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- On Hold requests will be dynamically inserted here -->
+        </tbody>
+      </table>
+      <button class="toggle-btn" onclick="toggleVisibility('onhold-requests')">Toggle On Hold Requests</button>
+    </section>
+  </div>
+
+  <script src="sim.js" defer></script>
+  <script src="appr.js" defer></script>
+  <script>
+    // Function to toggle visibility of sections
+    function toggleVisibility(section) {
+      const sectionElement = document.getElementById(section);
+      sectionElement.style.display = (sectionElement.style.display === "none") ? "block" : "none";
+    }
+  </script>
+</body>
+
+</html>

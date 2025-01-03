@@ -1,0 +1,224 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h2 {
+  font-size: 2em;
+  color: #e74c3c;
+}
+
+header .highlight {
+  font-size: 1.2em;
+  color: #2ecc71;
+}
+
+header i {
+  margin-right: 10px;
+}
+
+/* Form Styling */
+fieldset {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+legend {
+  font-size: 1.5em;
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+button[type="submit"] {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #e74c3c;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+button {
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button.view-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+button.view-btn:hover {
+  background-color: #2980b9;
+}
+
+button.approve-btn {
+  background-color: #2ecc71;
+  color: white;
+}
+
+button.approve-btn:hover {
+  background-color: #27ae60;
+}
+
+button.reject-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+button.reject-btn:hover {
+  background-color: #c0392b;
+}
+
+/* List Container Styling */
+.list-container {
+  margin-bottom: 30px;
+}
+
+.list-container h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.list-container h3 i {
+  margin-right: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer .back-btn {
+  font-size: 1.2em;
+  color: #3498db;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #3498db;
+}
+
+footer .back-btn:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  header h2 {
+    font-size: 1.5em;
+  }
+
+  header .highlight {
+    font-size: 1em;
+  }
+
+  fieldset {
+    padding: 10px;
+  }
+
+  label {
+    font-size: 1em;
+  }
+
+  input, select, textarea, button[type="submit"] {
+    font-size: 1em;
+  }
+
+  table {
+    font-size: 0.9em;
+  }
+
+  button {
+    font-size: 0.9em;
+  }
+}

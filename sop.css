@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading Section */
+header h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #b71c1c;
+  margin-bottom: 10px;
+}
+
+header p {
+  text-align: center;
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+input {
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  background-color: #b71c1c;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d32f2f;
+}
+
+/* Link Styles */
+a {
+  color: #b71c1c;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Toggle Buttons */
+.toggle-button {
+  display: inline-block;
+  margin: 10px 0;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #b71c1c;
+}
+
+.toggle-button:hover {
+  text-decoration: underline;
+}
+
+/* Hidden Form */
+#signupFormContainer {
+  display: none;
+}
+
+/* Icon Styles */
+label i {
+  margin-right: 8px;
+  color: #b71c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  input,
+  button {
+    font-size: 14px;
+  }
+}
